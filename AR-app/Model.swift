@@ -62,9 +62,7 @@ class Model {
                 
             })
     }
-    func setScale(scale:Float){
-        self.scaleCompensation = scale
-    }
+
 }
 
 struct Models {

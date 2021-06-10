@@ -12,7 +12,7 @@ import RealityKit
 struct ContentView: View {
     @EnvironmentObject var placementSettings:PlacementSettings
     @State private var isControlVisiable:Bool = true
-//    @State private var curentScale:CGFloat = 1
+
     @State private var showBrowse:Bool = false
     
     var body: some View {
@@ -26,14 +26,6 @@ struct ContentView: View {
           
         }
         .edgesIgnoringSafeArea(.all)
-//        .scaleEffect(curentScale)
-        .gesture(MagnificationGesture().onChanged({ newScale in
-            self.placementSettings.selectModel?.setScale(scale: Float(newScale))
-            print("Scale: \(Float(newScale))")
-            })
-            .onEnded({ scale in
-
-        }))
     }
 }
 
